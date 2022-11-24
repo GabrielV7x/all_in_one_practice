@@ -1,21 +1,30 @@
 
 // when click on a pokemon type, background color of the matching pokemon type change.
 
-// select pokemon by type
-const electric = document.querySelectorAll('.electric');
+const electric = document.querySelectorAll('.electric');   // select pokemon by type
+const buttonElectric = document.querySelector('.btn_electric') //create a button to listen to the event
+buttonElectric.addEventListener("click", changeColor)      // add event event on button to listen
 
-//create a button to listen to the event
-const buttonElectric = document.querySelector('.btn_electric')
 
-// add event event on button to listen
-buttonElectric.addEventListener("click", changeColor)
+const fire = document.querySelectorAll('.fire');      // select pokemon by type
+const buttonFire = document.querySelector('.btn_fire') //create a button to listen to the event
+buttonFire.addEventListener("click", changeColor)
 
-// function called, forEach loop used to acces each pokemon to apply class changes.
+pokemons = ''
+
+
 function changeColor() {
-  electric.forEach(pokemon => {
+  console.log(this.id)                           // function called, forEach loop used to acces each pokemon to apply class changes.
+  if (this.id === "electric") {
+    pokemons = document.querySelectorAll('.electric')
+  } else {
+    pokemons = document.querySelectorAll('.fire')
+  }
+
+  pokemons.forEach(pokemon => {
     const color = pokemon.getAttribute("data-color")
     // console.log(color)
     pokemon.classList.toggle(color);
-    console.log("changeColor function has been called")
+    console.log("changeColor called")
   });
 }
