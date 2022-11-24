@@ -1,30 +1,27 @@
 
-// when click on a pokemon type, background color of the matching pokemon type change.
+// when click on a button, the background color of the pokemons with the matching element type shouls change.
 
-const electric = document.querySelectorAll('.electric');   // select pokemon by type
-const buttonElectric = document.querySelector('.btn_electric') //create a button to listen to the event
-buttonElectric.addEventListener("click", changeColor)      // add event event on button to listen
+const buttonElectric = document.querySelector('.btn_electric');    //create a button to listen to the event
+buttonElectric.addEventListener("click", changeColor);            // add event event on button to listen
 
+const buttonFire = document.querySelector('.btn_fire');
+buttonFire.addEventListener("click", changeColor);
 
-const fire = document.querySelectorAll('.fire');      // select pokemon by type
-const buttonFire = document.querySelector('.btn_fire') //create a button to listen to the event
-buttonFire.addEventListener("click", changeColor)
-
-pokemons = ''
+const buttonPlant = document.querySelector('.btn_plant');
+buttonPlant.addEventListener("click", changeColor);
 
 
 function changeColor() {
-  console.log(this.id)                           // function called, forEach loop used to acces each pokemon to apply class changes.
   if (this.id === "electric") {
-    pokemons = document.querySelectorAll('.electric')
+    pokemons = document.querySelectorAll('.electric');
+  } else if (this.id === "fire"){
+    pokemons = document.querySelectorAll('.fire');
   } else {
-    pokemons = document.querySelectorAll('.fire')
-  }
+    pokemons = document.querySelectorAll('.plant');
+  };
 
-  pokemons.forEach(pokemon => {
-    const color = pokemon.getAttribute("data-color")
-    // console.log(color)
+  pokemons.forEach(pokemon => {                             // function called, forEach loop used to acces each pokemon to apply class changes.
+    const color = pokemon.getAttribute("data-color");
     pokemon.classList.toggle(color);
-    console.log("changeColor called")
   });
-}
+};
