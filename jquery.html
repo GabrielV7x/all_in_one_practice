@@ -34,11 +34,11 @@
   </div>
 
   <script>
-    $('#test').click(function() {alert('hello iron')}) ;
 
-    // document.getElementById('test').onclick = function() {
-    //   alert('hello my dear')
-    // }
+    $(document).ready(function() {
+      $('#test').click(function() {
+        $(this).hide()}) ;
+    })
   </script>
 
 
