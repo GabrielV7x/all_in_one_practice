@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All in one practice</title>
   <link rel="stylesheet" href="styles/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <!-- <script src="js/main.js"></script> -->
 </head>
 
 <body>
@@ -19,7 +23,9 @@
   </ul>
 
 
-  <div style="margin-top: 60px;">
+
+
+  <div id="test" style="margin-top: 60px;">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Maiores, unde. Natus minima esse minus ipsa! Animi iste ducimus,
       provident eius exercitationem dolorem harum eligendi optio asperiores
@@ -27,6 +33,13 @@
     </p>
   </div>
 
+  <script>
+    $('#test').click(function() {alert('hello iron')}) ;
+
+    // document.getElementById('test').onclick = function() {
+    //   alert('hello my dear')
+    // }
+  </script>
 
 
 
