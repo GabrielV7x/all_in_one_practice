@@ -21,9 +21,9 @@ function changeColor() {
   };
   pokemons.forEach(pokemon => {                             // function called, forEach loop used to acces each pokemon to apply class changes.
     const color = pokemon.getAttribute("data-color");
-    const class1 = pokemon.getAttribute("class");
-    console.log(class1)
+    const dataBtn = pokemon.getAttribute("data-btn");
+    console.log(dataBtn)
     pokemon.classList.toggle(color);
-    // pokemon.classList.toggle(class2);
+    pokemon.classList.toggle(dataBtn);
   });
 };
