@@ -1,0 +1,29 @@
+.main_container {
+
+  background-color: blue;
+  width: 800px;
+  margin: auto;
+  margin-top: 125px;
+  height: 250px;
+}
+
+
+
+.second_container {
+  display: flex;
+  justify-content: space-around;
+  background-color: aquamarine;
+}
+
+.second_container_2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.second_container:first-child {
+  height: 75%;
+}
+
+.third_container {
+  background-color: blueviolet;
+}
