@@ -19,10 +19,11 @@ function changeColor() {
   } else {
     pokemons = document.querySelectorAll('.plant');
   };
-
   pokemons.forEach(pokemon => {                             // function called, forEach loop used to acces each pokemon to apply class changes.
     const color = pokemon.getAttribute("data-color");
+    const class1 = pokemon.getAttribute("class");
+    console.log(class1)
     pokemon.classList.toggle(color);
-    pokemon.classList.toggle('btn-1');
+    // pokemon.classList.toggle(class2);
   });
 };
