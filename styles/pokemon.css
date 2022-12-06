@@ -72,6 +72,24 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
 color: white;
 }
 
+#electric, #fire, #plant {
+  width: 130px;
+  height: 40px;
+  color: rgb(228, 228, 228);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: rgb(124, 20, 122);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+   /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none; */
+}
+
 
 /* JAVASCRIPT CLASSES */
 
