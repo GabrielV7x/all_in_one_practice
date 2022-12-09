@@ -13,8 +13,17 @@
   </script>
 
   <style>
-    p {
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      margin: 5px;
       position:relative;
+    }
+
+    .this_container {
+      display: flex;
     }
   </style>
 </head>
@@ -32,10 +41,17 @@
   <div id="test" style="margin-top: 60px;">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, tempore?
   </div>
-  <p id="p1">click</p>
-  <p id="p2">hover</p>
-  <p id="p3">mouseout</p>
-  <p id="p4">double click</p>
+  <p id="p1">animate</p>
+  <p id="p2">fadetoggle</p>
+  <p id="p3">slidetoggle</p>
+  <p id="p4">chaining</p>
+
+  <div class="this_container">
+    <div id="s1" class="square"></div>
+    <div id="s2" class="square"></div>
+    <div id="s3" class="square"></div>
+    <div id="s4" class="square"></div>
+  </div>
 
   <script>
 
@@ -44,7 +60,20 @@
         $(this).hide()}) ;
 
       $('#p1').click(function() {
-        $(this).animate({left: '80px'})
+        $(s1).animate({top: '80px'})
+      })
+
+      $('#p2').click(function() {
+        $(s2).fadeToggle()
+      })
+
+
+      $('#p3').click(function() {
+        $(s3).slideToggle()
+      })
+
+      $('#p4').click(function() {
+        $('#s4').css("background-color", "red").slideUp(2000).slideDown(2000);
       })
     })
   </script>
