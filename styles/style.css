@@ -1,2 +1,9 @@
 @import "menu.css";
 @import "pokemon.css";
+
+/* index page css */
+.container {
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
