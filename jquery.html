@@ -5,12 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All in one practice</title>
+
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous">
   </script>
-  <!-- <script src="js/main.js"></script> -->
+
+  <style>
+    p {
+      position:relative;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,22 +28,24 @@
     <li><a href="#about">About</a></li>
   </ul>
 
-
-
-
+  <!-- write my code here -->
   <div id="test" style="margin-top: 60px;">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Maiores, unde. Natus minima esse minus ipsa! Animi iste ducimus,
-      provident eius exercitationem dolorem harum eligendi optio asperiores
-      neque dolores! Veniam, vitae.
-    </p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, tempore?
   </div>
+  <p id="p1">click</p>
+  <p id="p2">hover</p>
+  <p id="p3">mouseout</p>
+  <p id="p4">double click</p>
 
   <script>
 
     $(document).ready(function() {
       $('#test').click(function() {
         $(this).hide()}) ;
+
+      $('#p1').click(function() {
+        $(this).animate({left: '80px'})
+      })
     })
   </script>
 
@@ -50,8 +58,6 @@
   <div class="footer">
     <p>Footer</p>
   </div>
-<!-- JAVASCRIPT LINK -->
-<script src="javascript.js">
-</script>
+
 </body>
 </html>
